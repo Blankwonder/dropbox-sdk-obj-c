@@ -10,7 +10,6 @@
 
 #import "DBAppClient.h"
 #import "DBClientsManager.h"
-#import "DBTeamClient.h"
 #import "DBUserClient.h"
 
 /// Networking
