@@ -12,10 +12,7 @@
 #import "DBFILEPROPERTIESUserAuthRoutes.h"
 #import "DBFILEREQUESTSUserAuthRoutes.h"
 #import "DBFILESUserAuthRoutes.h"
-#import "DBPAPERUserAuthRoutes.h"
-#import "DBSHARINGUserAuthRoutes.h"
 #import "DBTransportClientProtocol.h"
-#import "DBUSERSUserAuthRoutes.h"
 
 @implementation DBUserBaseClient
 
@@ -30,9 +27,6 @@
     _filePropertiesRoutes = [[DBFILEPROPERTIESUserAuthRoutes alloc] init:client];
     _fileRequestsRoutes = [[DBFILEREQUESTSUserAuthRoutes alloc] init:client];
     _filesRoutes = [[DBFILESUserAuthRoutes alloc] init:client];
-    _paperRoutes = [[DBPAPERUserAuthRoutes alloc] init:client];
-    _sharingRoutes = [[DBSHARINGUserAuthRoutes alloc] init:client];
-    _usersRoutes = [[DBUSERSUserAuthRoutes alloc] init:client];
   }
   return self;
 }

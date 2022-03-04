@@ -11,11 +11,8 @@
 #import "DBFILEPROPERTIESUserAuthRoutes.h"
 #import "DBFILEREQUESTSUserAuthRoutes.h"
 #import "DBFILESUserAuthRoutes.h"
-#import "DBPAPERUserAuthRoutes.h"
 #import "DBRequestErrors.h"
-#import "DBSHARINGUserAuthRoutes.h"
 #import "DBTasks.h"
-#import "DBUSERSUserAuthRoutes.h"
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -53,15 +50,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Routes within the `files` namespace.
 @property (nonatomic, readonly) DBFILESUserAuthRoutes *filesRoutes;
-
-/// Routes within the `paper` namespace.
-@property (nonatomic, readonly) DBPAPERUserAuthRoutes *paperRoutes;
-
-/// Routes within the `sharing` namespace.
-@property (nonatomic, readonly) DBSHARINGUserAuthRoutes *sharingRoutes;
-
-/// Routes within the `users` namespace.
-@property (nonatomic, readonly) DBUSERSUserAuthRoutes *usersRoutes;
 
 /// Initializes the `DBUserBaseClient` object with a networking client.
 - (instancetype)initWithTransportClient:(id<DBTransportClient>)client;

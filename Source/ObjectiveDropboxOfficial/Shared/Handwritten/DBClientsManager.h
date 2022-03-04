@@ -46,20 +46,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSDictionary<NSString *, DBUserClient *> *)authorizedClients;
 
 ///
-/// Accessor method for the authorized `DBTeamClient` shared instance.
-///
-/// @return The the authorized `DBTeamClient` shared instance.
-///
-+ (nullable DBTeamClient *)authorizedTeamClient;
-
-///
-/// Multi-Dropbox account use case. Returns all current Dropbox team clients.
-///
-/// @return Mapping of `tokenUid` (account ID) to authorized `DBTeamClient` instance.
-///
-+ (NSDictionary<NSString *, DBTeamClient *> *)authorizedTeamClients;
-
-///
 /// Multi-Dropbox account use case. Creates and stores a new shared authorized user client instance with the access
 /// token retrieved from storage via the supplied `tokenUid` key.
 ///
@@ -70,18 +56,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// @returns Whether a valid token exists in storage for the supplied `tokenUid`.
 ///
 + (BOOL)authorizeClientFromKeychain:(nullable NSString *)tokenUid;
-
-///
-/// Multi-Dropbox account use case. Creates and stores a new shared authorized team client instance with the access
-/// token retrieved from storage via the supplied `tokenUid` key.
-///
-/// @param tokenUid The uid of the stored access token to use to reauthorize. This uid is returned after a successful
-/// progression through the OAuth flow (via `handleRedirectURLTeam:`) in the `DBAccessToken` field of the
-/// `DBOAuthResult` object.
-///
-/// @returns Whether a valid token exists in storage for the supplied `tokenUid`.
-///
-+ (BOOL)authorizeTeamClientFromKeychain:(nullable NSString *)tokenUid;
 
 ///
 /// Handles launching the SDK with a redirect url from an external source to authorize a user API client.
